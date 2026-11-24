@@ -1,0 +1,7 @@
+{
+  "global": {
+    "f8": "read-aloud.toggle",
+    "f9": "read-aloud.play",
+    "f10": "read-aloud.stop"
+  }
+}
