@@ -11,6 +11,7 @@ export default class ReadAloud extends View {
     this.script = `${home()}\\bin\\read-aloud.ps1`;
     this.stateFile = `${home()}\\.pi\\agent\\extensions\\.read-aloud-state.json`;
     this.lastDir = `${home()}\\.pi\\agent\\read-aloud\\last`;
+    if (checking()) return;
     this.refresh(cx);
     cx.timer.every(3000, (cx) => this.refresh(cx));
     cx.spawn(async (cx) => {
